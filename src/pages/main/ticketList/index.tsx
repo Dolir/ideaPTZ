@@ -3,6 +3,7 @@ import { Ticket } from "./ticket"
 import style from "./style.module.scss"
 import { useFilterContext } from "../filterContext"
 import { useMemo } from "react"
+import { Text } from "src/components/text"
 
 export const TicketList = () => {
   const { transferOptions } = useFilterContext()
@@ -15,6 +16,15 @@ export const TicketList = () => {
     )
   }, [transferOptions])
 
+  if (!filteredTickets.length)
+    return (
+      <Text className={style.notFound} align="center" fontSize="h0">
+        Ничего не найдено
+        <br />
+        <br />
+        <Text fontSize="h3">Попробуйте изменить фильтры</Text>
+      </Text>
+    )
   return (
     <div className={style.ticketList}>
       {filteredTickets.map((ticket) => (
