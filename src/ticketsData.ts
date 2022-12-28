@@ -16,32 +16,6 @@ const generateRandomDate = () => {
 }
 export const tickets = [
   {
-    id: 0,
-    price: 100,
-    transfers: 0,
-    departure: {
-      time: generateRandomDate().getTime(),
-      location: "VVO, Владивосток"
-    },
-    arrival: {
-      time: generateRandomDate().getTime(),
-      location: "Тель-Авив, TLV"
-    }
-  },
-  {
-    id: 2,
-    price: 132,
-    transfers: 1,
-    departure: {
-      time: generateRandomDate().getTime(),
-      location: "NE, Париж"
-    },
-    arrival: {
-      time: generateRandomDate().getTime(),
-      location: "Милан, MI"
-    }
-  },
-  {
     id: 3,
     price: 43,
     transfers: 3,
@@ -67,6 +41,33 @@ export const tickets = [
       location: "Пекин, PK"
     }
   },
+  {
+    id: 0,
+    price: 100,
+    transfers: 0,
+    departure: {
+      time: generateRandomDate().getTime(),
+      location: "VVO, Владивосток"
+    },
+    arrival: {
+      time: generateRandomDate().getTime(),
+      location: "Тель-Авив, TLV"
+    }
+  },
+  {
+    id: 2,
+    price: 132,
+    transfers: 1,
+    departure: {
+      time: generateRandomDate().getTime(),
+      location: "NE, Париж"
+    },
+    arrival: {
+      time: generateRandomDate().getTime(),
+      location: "Милан, MI"
+    }
+  },
+
   {
     id: 5,
     price: 530,
