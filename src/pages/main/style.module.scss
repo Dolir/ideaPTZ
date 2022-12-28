@@ -1,3 +1,14 @@
 .mainContainer {
-  background-color: red;
+  display: flex;
+  gap: 20px;
+  width: 900px;
+  margin: auto;
+  margin-top: 200px;
+
+  & > div:first-child {
+    flex: 1;
+  }
+  & > div:last-child {
+    flex: 2.5;
+  }
 }

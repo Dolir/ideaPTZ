@@ -1,0 +1,60 @@
+@import "styles/colors.module.scss";
+
+.checkboxContainer {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  height: 26px;
+  width: 27px;
+  & > input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+    &:checked ~ .checkMark {
+      &::after {
+        display: block;
+      }
+      border-color: $primary;
+
+      background-color: $white;
+    }
+  }
+  .checkMark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    border: 1.5px solid $black60op;
+    height: 25px;
+    width: 25px;
+    background-color: $white;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid $primary;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  &:hover input:not(:checked) ~ .checkMark {
+    border-color: $black60op;
+    filter: brightness(95%);
+  }
+  &:hover input:checked ~ .checkMark {
+    border-color: $black60op;
+    &::after {
+      border-color: $black60op;
+    }
+  }
+}

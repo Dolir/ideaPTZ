@@ -1,0 +1,21 @@
+@import "styles/colors.module.scss";
+
+.optionContainer {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  margin: 0 -20px;
+  gap: 10px;
+
+  .onlyButton {
+    display: none;
+  }
+  &:hover {
+    background-color: $primary30;
+    cursor: pointer;
+    .onlyButton {
+      margin-left: auto;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.buttonGroupComponent {
+  width: 100%;
+  display: flex;
+
+  & > button {
+    flex: 1;
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}

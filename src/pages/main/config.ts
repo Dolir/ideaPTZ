@@ -28,3 +28,6 @@ export const filterConfig = {
     { name: "3 пересадки", value: 3 }
   ]
 } as const
+
+export type CurrencyType = typeof filterConfig.currencies[number]
+export type TransferOptionType = typeof filterConfig.transferOptions[number]
